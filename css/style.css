@@ -105,6 +105,9 @@ select {
 }
 .header .nav li:hover .sub-menu{
     display: block;
+    transform: translateY(0);
+    opacity: 1;
+
 }
 .header .sub-menu{
     display:none;
@@ -113,6 +116,9 @@ select {
     left:0;
     min-width: 220px;
     background: var(--white);
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 .header .sub-menu li a{
     padding: 0px 25px;
@@ -120,7 +126,14 @@ select {
     align-items: center;
     text-decoration: none;
     height:40px;
-    color: #222;
+    color: #0009;
+    text-transform: capitalize;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+}
+.header .sub-menu li:hover a{
+    background:var(--primary);
+    color: var(--white);
 }
 .header .nav a {
     display: inline-block;
@@ -592,7 +605,7 @@ h1.heading {
     object-fit: cover;
 }
 
-.blog-item:hover img {
+.blog-item:hover .thumb{
     transform: scale(1.05);
     /* background-color:rgba(120, 61, 240, 0.9); */
 }
